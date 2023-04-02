@@ -9,3 +9,4 @@
 ### *SQLite_and_console_logger.py*
 
 <em>**SQLite and console logger**</em> A simple script to log to a SQLite database and to the console.
+![Logger](https://github.com/dlroy88osu/CustomSnips/blob/bd516db54d00d18bb8b6ca30dc20a585a3a990ad/example_img/SQLite%20and%20console%20logger.jpg)
