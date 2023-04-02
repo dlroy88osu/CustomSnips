@@ -3,6 +3,7 @@
 @Python    :    3.11.2
 @Author    :    mementoQuare
 @Copyright :    Daniel Roy, 2023-04-02
+@Contact   :    daniellmroy@gmail.com
 @License   :    GNU GENERAL PUBLIC LICENSE
 '''
 
