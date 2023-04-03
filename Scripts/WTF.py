@@ -64,17 +64,7 @@ class WTF(object):  # What The Failure!!!
         log.info('Creating issue')
         self._rpx.create_issue(title=self._title, body=self._msg,
                                assignee=self._who, labels=[self._lbl])
-
-    def _validate_response(self, p_resp: object):
-        '''validates response'''
-        log.info('Validating response')
-        if p_resp.status_code != 201:
-            log.error('Issue not created, status code: %s', p_resp.status_code)
-            # [ Have mine hooked to en emailer here as failover ]
-            raise Exception('Issue not created, status code: %s',
-                            p_resp.status_code)
-        log.info('Issue created successfully, status code: %s',
-                 p_resp.status_code)
+        return
 
     def seriously(self):
         '''Public method to create the issue in desired location'''
