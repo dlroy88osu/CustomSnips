@@ -50,8 +50,8 @@ class WTF(object):  # What The Failure!!!
     def _get_gh(self):
         '''initializes github'''
         log.info('Getting token')
-        # v_keys = GateKeeper('api_github').let_me_in()
-        # self._gh = Github(v_keys['pass'])
+        v_keys = GateKeeper('api_github').let_me_in()
+        self._gh = Github(v_keys['pass'])
         self._gh = Github(G_TOKEN)
 
     def _get_repo(self):
