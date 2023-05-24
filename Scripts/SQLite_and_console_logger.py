@@ -37,10 +37,10 @@ class Log(object):
             p_err_lvl (str): error level
             p_message (str): message to log
         Example:
-            >>> Log('info', 'Starting script').log_me()
-            >>> Log('warn', 'This is a warning').log_me()
-            >>> Log('error', 'This is an error').log_me()
-            >>> Log('critical', 'This is a critical error').log_me()
+            >>> Log('info', 'Starting script')
+            >>> Log('warn', 'This is a warning')
+            >>> Log('error', 'This is an error')
+            >>> Log('critical', 'This is a critical error')
         '''
         self._root_path = self._set_root_path()
         self._if_not_dir()
@@ -52,6 +52,7 @@ class Log(object):
         self._func = currentframe().f_back.f_code.co_name
         self._line_num = currentframe().f_back.f_lineno
         self._date_logged = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+        self._log_me()
 
     def _set_root_path(self) -> str:
         '''sets root path'''
@@ -124,13 +125,13 @@ class Log(object):
         v_conn.commit()
         v_conn.close()
 
-    def log_me(self) -> None:
+    def _log_me(self) -> None:
         '''logs to the console and database'''
         self._log_to_console()
         self._log_to_db()
 
 
-Log('INFO', 'Starting main routine for logger').log_me()
-Log('WARN', 'This is a warning').log_me()
-Log('ERROR', 'This is an error').log_me()
-Log('CRITICAL', 'This is a critical error').log_me()
+Log('INFO', 'Starting main routine for logger')
+Log('WARN', 'This is a warning')
+Log('ERROR', 'This is an error')
+Log('CRITICAL', 'This is a critical error')

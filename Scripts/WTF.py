@@ -37,7 +37,7 @@ class WTF(object):  # What The Failure!!!
         '''
 
         log.info('Initializing WTF')
-        self._title = f'W.T.F. => {p_title.title()}'
+        self._title = f'W.T.Failure => {p_title.title()}'
         self._msg = p_msg.lower()
         self._who = G_ASSIGNEE
         self._lbl = p_label
@@ -50,7 +50,7 @@ class WTF(object):  # What The Failure!!!
     def _get_gh(self):
         '''initializes github'''
         log.info('Getting token')
-        v_keys = GateKeeper('api_github').let_me_in()
+        v_keys = GateKeeper('api_github')
         self._gh = Github(v_keys['pass'])
         self._gh = Github(G_TOKEN)
 
